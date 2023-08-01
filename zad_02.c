@@ -74,14 +74,14 @@ int main(){
     printf("Ender a num between 1 and 6: ");
     scanf("%d", &n);
     
-    int *p = &n;
-   // GetComparator(*p);
+    //int *p = &n;
+    //GetComparator(n);
 
     // qsort(arr,N,sizeof(points), compare_ints__inc);
-    qsort(car, sizeof(car)/sizeof(car[0]), sizeof(Car), GetComparator);
+    qsort(car, sizeof(car)/sizeof(car[0]), sizeof(Car), GetComparator(n));
 
     for(size_t i = 0; i < 10; i++){
-        printf("Model = %s, Maxspeed = %d, Price = %lf\n", car[i].model, car[i].maxspeed, car[i].maxspeed, car[i].price);
+        printf("Model = %s, Maxspeed = %d, Price = %.2lf\n", car[i].model, car[i].maxspeed, car[i].maxspeed, car[i].price);
     }
     printf("\n");
 

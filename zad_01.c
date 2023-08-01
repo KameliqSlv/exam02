@@ -8,7 +8,7 @@
 char* encode_str(const char *str){
     char *result = malloc(strlen(str) + 1);
 
-    for (int i = 0; i < strlen(str); i++){
+    for (size_t i = 0; i < strlen(str); i++){
         if(i%2 == 0){
             result[i] = str[i] + 'A' - 'a';
             //result[i] = str[i] + 'A' - 'Z';
